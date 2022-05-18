@@ -32,7 +32,7 @@ namespace PlayerService
 
             services.AddControllers();
             services.AddAutoMapper(config => config.AddProfile(typeof(PlayerMapper)));
-            services.AddSwaggerGen(options => { options.SwaggerDoc("v1", new OpenApiInfo { Title = "News Service" }); });
+            services.AddSwaggerGen(options => { options.SwaggerDoc("v1", new OpenApiInfo { Title = "Player Service" }); });
             services.AddDbContext<PlayerDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("Default")));
         }
 

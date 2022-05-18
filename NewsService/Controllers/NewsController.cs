@@ -29,7 +29,7 @@ namespace NewsService.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<NewsGetDTO> UpdateAsync(int id, NewsPutDTO newsUpdateDto)
+        public async Task<NewsGetDTO> UpdateAsync(int id,[FromForm] NewsPutDTO newsUpdateDto)
         {
             var news = await newsService.UpdateAsync(id, newsUpdateDto);
             return mapper.Map<NewsGetDTO>(news);

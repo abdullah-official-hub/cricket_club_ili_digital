@@ -67,7 +67,7 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "JwtAuthenticationScheme"
       },
-      "DownstreamPathTemplate": "/api/player/update",
+      "DownstreamPathTemplate": "/api/player/update/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -75,7 +75,7 @@
           "Port": 44329
         }
       ],
-      "UpstreamPathTemplate": "/updatePlayer",
+      "UpstreamPathTemplate": "/updatePlayer/{id}",
       "UpstreamHttpMethod": [ "Put" ],
       "RateLimitOptions": {
         "ClientWhitelist": [],
@@ -90,7 +90,7 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "JwtAuthenticationScheme"
       },
-      "DownstreamPathTemplate": "/api/player/delete",
+      "DownstreamPathTemplate": "/api/player/delete/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -98,7 +98,7 @@
           "Port": 44329
         }
       ],
-      "UpstreamPathTemplate": "/deletePlayer",
+      "UpstreamPathTemplate": "/deletePlayer/{id}",
       "UpstreamHttpMethod": [ "Delete" ],
       "RateLimitOptions": {
         "ClientWhitelist": [],
@@ -182,7 +182,7 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "JwtAuthenticationScheme"
       },
-      "DownstreamPathTemplate": "/api/news/update",
+      "DownstreamPathTemplate": "/api/news/update/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -190,7 +190,7 @@
           "Port": 44393
         }
       ],
-      "UpstreamPathTemplate": "/updateNews",
+      "UpstreamPathTemplate": "/updateNews/{id}",
       "UpstreamHttpMethod": [ "Put" ],
       "RateLimitOptions": {
         "ClientWhitelist": [],
@@ -205,7 +205,7 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "JwtAuthenticationScheme"
       },
-      "DownstreamPathTemplate": "/api/news/delete",
+      "DownstreamPathTemplate": "/api/news/delete/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -213,7 +213,7 @@
           "Port": 44393
         }
       ],
-      "UpstreamPathTemplate": "/deleteNews",
+      "UpstreamPathTemplate": "/deleteNews/{id}",
       "UpstreamHttpMethod": [ "Delete" ],
       "RateLimitOptions": {
         "ClientWhitelist": [],
