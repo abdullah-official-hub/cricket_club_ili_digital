@@ -1,0 +1,277 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/identity/register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44361
+        }
+      ],
+      "UpstreamPathTemplate": "/registerOwner",
+      "UpstreamHttpMethod": [ "Post" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "registerOwner"
+    },
+    {
+      "DownstreamPathTemplate": "/api/identity/authenticate",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44361
+        }
+      ],
+      "UpstreamPathTemplate": "/loginOwner",
+      "UpstreamHttpMethod": [ "Post" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "loginOwner"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/player/add",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44329
+        }
+      ],
+      "UpstreamPathTemplate": "/addPlayer",
+      "UpstreamHttpMethod": [ "Post" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "addPlayer"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/player/update",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44329
+        }
+      ],
+      "UpstreamPathTemplate": "/updatePlayer",
+      "UpstreamHttpMethod": [ "Put" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "updatePlayer"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/player/delete",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44329
+        }
+      ],
+      "UpstreamPathTemplate": "/deletePlayer",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "deletePlayer"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/player/get/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44329
+        }
+      ],
+      "UpstreamPathTemplate": "/getPlayer/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "getPlayer"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/player/getAll?{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44329
+        }
+      ],
+      "UpstreamPathTemplate": "/getAllPlayer?{everything}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "getAllPlayer"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/news/add",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "UpstreamPathTemplate": "/addNews",
+      "UpstreamHttpMethod": [ "Post" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "addNews"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/news/update",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "UpstreamPathTemplate": "/updateNews",
+      "UpstreamHttpMethod": [ "Put" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "updateNews"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/news/delete",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "UpstreamPathTemplate": "/deleteNews",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "deleteNews"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/news/get/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "UpstreamPathTemplate": "/getNews/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "getNews"
+    },
+    {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtAuthenticationScheme"
+      },
+      "DownstreamPathTemplate": "/api/news/getAll?{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44393
+        }
+      ],
+      "UpstreamPathTemplate": "/getAllNews?{everything}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1s",
+        "PeriodTimespan": 5,
+        "Limit": 3
+      },
+      "Key": "getAllNews"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44374"
+  }
+}
